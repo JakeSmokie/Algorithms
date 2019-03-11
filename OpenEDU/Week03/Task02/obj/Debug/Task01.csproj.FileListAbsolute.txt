@@ -1,0 +1,7 @@
+C:\Users\Jake\studyrepos\Algorithms\OpenEDU\Week03\Task01\bin\Debug\Task01.exe.config
+C:\Users\Jake\studyrepos\Algorithms\OpenEDU\Week03\Task01\bin\Debug\Task01.exe
+C:\Users\Jake\studyrepos\Algorithms\OpenEDU\Week03\Task01\bin\Debug\Task01.pdb
+C:\Users\Jake\studyrepos\Algorithms\OpenEDU\Week03\Task01\obj\Debug\Task01.csprojAssemblyReference.cache
+C:\Users\Jake\studyrepos\Algorithms\OpenEDU\Week03\Task01\obj\Debug\Task01.csproj.CoreCompileInputs.cache
+C:\Users\Jake\studyrepos\Algorithms\OpenEDU\Week03\Task01\obj\Debug\Task01.exe
+C:\Users\Jake\studyrepos\Algorithms\OpenEDU\Week03\Task01\obj\Debug\Task01.pdb
