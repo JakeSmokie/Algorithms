@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace Week04.Task04 {
+namespace Week04.Task05 {
     public sealed class Program {
         private static StreamWriter _out;
 
@@ -21,12 +21,6 @@ namespace Week04.Task04 {
             DisposeIO();
         }
 
-        private static string[] ReadLineArray() {
-            return Console.ReadLine()
-                .Split(' ')
-                .ToArray();
-        }
-
         private static void SetupIO() {
             _out = new StreamWriter("output.txt");
             Console.SetOut(_out);
@@ -40,9 +34,7 @@ namespace Week04.Task04 {
     internal class Quack {
         private readonly Queue<ushort> _queue = new Queue<ushort>();
 
-        private readonly Dictionary<int, ushort> _registers =
-            Enumerable.Range('a', 26)
-                .ToDictionary(x => x, y => (ushort) 0);
+        private Dictionary<int, ushort> _registers;
 
         private int _cursor;
 
@@ -51,6 +43,10 @@ namespace Week04.Task04 {
         private bool _stopped;
 
         public void Run(string[] lines) {
+            _registers = Enumerable.Range('a', 26)
+                .ToDictionary(x => x, y => (ushort) 0);
+
+            _queue.Clear();
             DefineLabels(lines);
             DefineInstructions();
 
