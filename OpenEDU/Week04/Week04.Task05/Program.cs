@@ -72,10 +72,7 @@ namespace Week04.Task04 {
         private void DefineInstructions() {
             _instructions = new Dictionary<char, Action<string>> {
                 ['+'] = s => { Put(Get() + Get()); },
-                ['-'] = s => {
-                    var a = Get();
-                    Put(a - Get());
-                },
+                ['-'] = s => { Put(Get() - Get()); },
                 ['*'] = s => { Put(Get() * Get()); },
                 ['/'] = s => {
                     var a = Get();
@@ -89,22 +86,8 @@ namespace Week04.Task04 {
                 },
                 ['>'] = s => { _registers[s[1]] = Get(); },
                 ['<'] = s => { Put(_registers[s[1]]); },
-                ['P'] = s => {
-                    if (s.Length == 1) {
-                        Console.WriteLine(Get());
-                    }
-                    else {
-                        Console.WriteLine(_registers[s[1]]);
-                    }
-                },
-                ['C'] = s => {
-                    if (s.Length == 1) {
-                        Console.Write((char) (Get() % 256));
-                    }
-                    else {
-                        Console.Write((char) (_registers[s[1]] % 256));
-                    }
-                },
+                ['P'] = s => { Console.WriteLine(s.Length == 1 ? Get() : _registers[s[1]]); },
+                ['C'] = s => { Console.Write((char) ((s.Length == 1 ? Get() : _registers[s[1]]) % 256)); },
                 [':'] = s => { },
                 ['J'] = s => { _cursor = _labels[new string(s.Skip(1).ToArray())]; },
                 ['Z'] = s => {
