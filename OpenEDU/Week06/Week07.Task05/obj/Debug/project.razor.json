@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "c:\\Users\\Jake\\studyrepos\\Algorithms\\OpenEDU\\Week06\\Week07.Task05\\Week07.Task05.csproj",
+  "TargetFramework": "v4.7.2",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "UnsupportedRazor",
+    "LanguageVersion": "1.0",
+    "Extensions": [
+      {
+        "ExtensionName": "UnsupportedRazorExtension"
+      }
+    ]
+  }
+}
